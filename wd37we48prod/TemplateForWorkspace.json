@@ -176,7 +176,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "22435314-d0eb-4639-b999-f0df11d05a2a"
+						"spark.autotune.trackingId": "61ca52e5-fca9-40d5-afdd-31bca3ec4eab"
 					}
 				},
 				"metadata": {
@@ -201,15 +201,13 @@
 						"sparkVersion": "3.5",
 						"nodeCount": 3,
 						"cores": 4,
-						"memory": 28,
-						"automaticScaleJobs": false
+						"memory": 28
 					},
 					"sessionKeepAliveTimeout": 30
 				},
 				"cells": [
 					{
 						"cell_type": "code",
-						"metadata": {},
 						"source": [
 							"print(\"welcome to git\")"
 						],
