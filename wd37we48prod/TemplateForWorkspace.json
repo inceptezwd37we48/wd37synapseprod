@@ -113,7 +113,70 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "631a9c07-3fed-4a33-b0b5-9267cf3420d3"
+						"spark.autotune.trackingId": "5e0c840d-d3bd-431f-8194-acd73d1437dd"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "Synapse PySpark"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/ca44b188-72b2-4b7d-988e-1dd0b2ea4773/resourceGroups/Rgwd37we48/providers/Microsoft.Synapse/workspaces/wd37we48prod/bigDataPools/we48sparkpool",
+						"name": "we48sparkpool",
+						"type": "Spark",
+						"endpoint": "https://wd37we48prod.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/we48sparkpool",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.5",
+						"nodeCount": 3,
+						"cores": 4,
+						"memory": 28
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"source": [
+							"print(\"welcome\")"
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/nb_git')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "we48sparkpool",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "22435314-d0eb-4639-b999-f0df11d05a2a"
 					}
 				},
 				"metadata": {
@@ -148,7 +211,7 @@
 						"cell_type": "code",
 						"metadata": {},
 						"source": [
-							"print(\"welcome\")"
+							"print(\"welcome to git\")"
 						],
 						"outputs": [],
 						"execution_count": null
